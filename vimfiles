@@ -1,0 +1,30 @@
+#!/bin/bash
+IFS=''
+
+while getopts ":c:" opt; do
+case $opt in
+c)
+carg="$OPTARG"
+;;
+/?)
+echo "Invalid option: -$OPTARG"
+;;
+esac
+done
+
+if [[ "$carg" ]]
+then
+while read file;
+do vim $file -c $carg </dev/tty;
+if [ $? = '1' ]
+then break;
+fi;
+done;
+else
+while read file;
+do vim $file </dev/tty;
+if [ $? = '1' ]
+then break;
+fi;
+done;
+fi
