@@ -22,3 +22,10 @@ automatically after the last match `|x` and move to the next file.
 ```
 find . -name 'file*' | vimfiles -c '%s/foo/bar/gc|x'
 ```
+
+backup
+======
+
+TODO: make it reusable :)
+
+A simple rsync script. hardcoded for my home backup..
