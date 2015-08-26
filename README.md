@@ -26,6 +26,6 @@ find . -name 'file*' | vimfiles -c '%s/foo/bar/gc|x'
 backup
 ======
 
-TODO: make it reusable :)
+TODO: make it reusable :) and add cleanup for old backups
 
 A simple rsync script. hardcoded for my home backup..
