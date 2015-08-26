@@ -6,4 +6,10 @@
 /swapfile
 /tmp
 /var/tmp
-/var/lib/mysql/
+/var/lib/mysql
+/home/dom/.cache
+/home/dom/npm
+/home/dom/.npm
+/home/dom/.atom
+/home/dom/dom
+*node_modules*
