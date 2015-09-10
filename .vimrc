@@ -1,22 +1,23 @@
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'groenewege/vim-less'
-Bundle 'othree/yajs.vim.git'
-Bundle 'mxw/vim-jsx'
+Plugin 'groenewege/vim-less'
+Plugin 'othree/yajs.vim.git'
+Plugin 'mxw/vim-jsx'
 
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'nathanaelkane/vim-indent-guides.git'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'nathanaelkane/vim-indent-guides.git'
 " See :help tabular
-Bundle 'godlygeek/tabular.git'
+Plugin 'godlygeek/tabular.git'
 
+call vundle#end()
 filetype plugin indent on     " required!
 
 " ----------------------------------------------------------------------------
@@ -58,37 +59,8 @@ let NERDTreeIgnore=[
 nnoremap <silent> <F12> :BufExplorer<CR>
 
 " ----------------------------------------------------------------------------
-" Syntastic
-
-let g:syntastic_mode_map = { 'mode': 'active',
-    \ 'active_filetypes': [
-        \'less',
-        \'javascript',
-        \'html',
-        \'python'
-    \],
-    \ 'passive_filetypes': [
-        \'xml'
-    \] }
-
-"let g:syntastic_quiet_warnings=1
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_enable_highlighting=0
-"let g:syntastic_auto_loc_list=1
-
-" Use flake8
-let g:syntastic_python_checkers = ['flake8', 'pyflakes']
-" let g:syntastic_python_flake8_args = '--ignore="E501,E302,E261,E701,E241,E126,E127,E128,W801"'
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" -----------------------------------------------------------------------------
 "  Indent guides colours.
-colorscheme sweet_n_sour
+" colorscheme sweet_n_sour
 nmap <F5> <Leader>ig
 set ts=4 sw=4 et
 let g:indent_guides_start_level = 2

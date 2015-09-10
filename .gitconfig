@@ -23,6 +23,7 @@
 	graph = log --decorate --graph --all -n 10
 	g = log --decorate --graph --all -n 10
 	b = branch
+	ci = commit
 [branch]
 	autosetuprebase = always
 [mergetool]
